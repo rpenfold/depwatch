@@ -8,14 +8,22 @@ This is done by storing a snapshot of the dependencies, and comparing to the sna
 
 This library is currently being built for my specific use cases. At this time I will not be implementing requested features that are not in the `Future Work` section. If you have a feature that you would like to include, please contact me or put in a pull request.
 
+## Installation
+
+`npm install -g @lyv/depwatch`
+
+## Usage
+
+`depwatch [command] [options]`
+
 ## CLI options
 
-| Argument | Description                                                  |
-|----------|--------------------------------------------------------------|
-| -r       | Restore dependencies if missing                              |
-| -u       | Update the snapshot                                          |
-| --node   | Check for changes to JavaScript dependencies                 |
-| --pods   | Check for changes to CocoaPod dependencies (not implemented) |
+| Option   | Alias | Description                                                  |
+|----------|-------|--------------------------------------------------------------|
+| restore  | -r    | Restore dependencies if missing                              |
+| update   | -u    | Update the snapshot                                          |
+| node     | -n    | Check for changes to JavaScript dependencies                 |
+| pods     | -n    | Check for changes to CocoaPod dependencies (not implemented) |
 
 ## Package.json
 
