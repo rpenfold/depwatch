@@ -1,6 +1,6 @@
 {
   "name": "@lyv/depwatch",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Detects dependency changes so you know when you need to restore them",
   "repository": {
     "type": "git",
