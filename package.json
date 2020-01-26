@@ -11,6 +11,10 @@
   "author": "Ryan Penfold",
   "license": "MIT",
   "dependencies": {},
+  "bin": {
+    "depwatch": "./index.js"
+  },
+  "preferGlobal": true,
   "depwatch": {
     "cacheFile": "./cache/depwatch.cache.json",
     "checkNode": true,

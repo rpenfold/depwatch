@@ -1,9 +1,9 @@
-const command = process.argv[2];
+const args = process.argv.splice(process.execArgv.length + 2);
+const command = args[0];
+
 
 if (command === "check") {
-    const check = require("./src/check");
-    check();
+    require("./src/check")();
 } else if ( command === "gitignore") {
-    const gitignore = require("./src/gitignore");
-    gitignore();
+    require("./src/gitignore")();
 }
