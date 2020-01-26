@@ -1,6 +1,6 @@
 {
   "name": "@lyv/depwatch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Detects dependency changes so you know when you need to restore them",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,9 @@
   },
   "author": "Ryan Penfold",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "colors": "1.4.0"
+  },
   "bin": {
     "depwatch": "./index.js"
   },
@@ -20,7 +22,4 @@
     "checkNode": true,
     "restore": true
   },
-  "devDependencies": {
-    "colors": "1.4.0"
-  }
 }
