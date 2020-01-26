@@ -1,0 +1,22 @@
+{
+  "name": "depwatch",
+  "version": "0.1.0",
+  "description": "Detects dependency changes so you know when you need to restore them",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index check -u",
+    "gitignore": "node ./index gitignore",
+    "check": "node ./index check -u"
+  },
+  "author": "Ryan Penfold",
+  "license": "MIT",
+  "dependencies": {},
+  "depwatch": {
+    "cacheFile": "./cache/depwatch.cache.json",
+    "checkNode": true,
+    "restore": true
+  },
+  "devDependencies": {
+    "colors": "1.4.0"
+  }
+}
