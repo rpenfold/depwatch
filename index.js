@@ -3,6 +3,7 @@
 const commandLineArgs = require('command-line-args');
 const optionDefinitions = [
     { name: 'command', type: String, defaultOption: true },
+    { name: 'all', alias: 'a', type: Boolean },
     { name: 'node', alias: 'n', type: Boolean },
     { name: 'pods', alias: 'p', type: Boolean },
     { name: 'restore', alias: 'r', type: Boolean },
@@ -16,6 +17,9 @@ switch (options.command) {
         break;
     case "gitignore":
         require("./src/gitignore")(options);
+        break;
+    case "update":
+        require("./src/update")(options);
         break;
     default:
         break;

@@ -20,10 +20,25 @@ This library is currently being built for my specific use cases. At this time I 
 
 `depwatch [command] [options]`
 
+## CLI Commands
+
+### Check
+
+Performs comparison of dependencies with the snapshot.
+
+### Gitignore
+
+Appends an entry in the `.gitignore` file to prevent the default snapshot file from being commited.
+
+## Update
+
+Updates the snapshot without running check. Recommended to add this to `postinstall` script to ensure that it is kept in sync.
+
 ## CLI options
 
 | Option   | Alias | Description                                                  |
 |----------|-------|--------------------------------------------------------------|
+| all      | -a    | Checks for changes to all dependencies
 | restore  | -r    | Restore dependencies if missing                              |
 | update   | -u    | Update the snapshot                                          |
 | node     | -n    | Check for changes to JavaScript dependencies                 |

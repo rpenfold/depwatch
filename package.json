@@ -1,6 +1,6 @@
 {
   "name": "@lyv/depwatch",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "keywords": ["node_modules", "pods", "dependencies", "libs"],
   "description": "Detects dependency changes so you know when you need to restore them",
   "repository": {
@@ -10,7 +10,9 @@
   "main": "index.js",
   "scripts": {
     "gitignore": "node ./index gitignore",
-    "check": "node ./index check -u"
+    "check": "node ./index check -u",
+    "update": "node ./index update -a",
+    "postinstall": "npm run update"
   },
   "author": "Ryan Penfold",
   "license": "MIT",
