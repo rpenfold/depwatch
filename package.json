@@ -1,7 +1,11 @@
 {
   "name": "@lyv/depwatch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Detects dependency changes so you know when you need to restore them",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rpenfold/dep-watch"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node ./index check -u",
@@ -21,5 +25,5 @@
     "cacheFile": "./cache/depwatch.cache.json",
     "checkNode": true,
     "restore": true
-  },
+  }
 }

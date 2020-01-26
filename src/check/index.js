@@ -27,7 +27,7 @@ module.exports = function() {
         if (shouldRestore && needsUpdate.length) {
             console.debug("Restoring missing dependencies...");
             const stdout = execSync("npm i");
-            console.debug("Missing node dependencies restore");
+            console.debug("Missing node dependencies restored");
         }
     }
 
