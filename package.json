@@ -1,6 +1,7 @@
 {
   "name": "@lyv/depwatch",
-  "version": "0.1.4",
+  "version": "0.1.6",
+  "keywords": ["node_modules", "pods", "dependencies", "libs"],
   "description": "Detects dependency changes so you know when you need to restore them",
   "repository": {
     "type": "git",
@@ -8,7 +9,6 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node ./index check -u",
     "gitignore": "node ./index gitignore",
     "check": "node ./index check -u"
   },
