@@ -30,7 +30,7 @@ Performs comparison of dependencies with the snapshot.
 
 Appends an entry in the `.gitignore` file to prevent the default snapshot file from being commited.
 
-## Update
+### Update
 
 Updates the snapshot without running check. Recommended to add this to `postinstall` script to ensure that it is kept in sync.
 
