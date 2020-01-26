@@ -1,5 +1,5 @@
 {
-  "name": "depwatch",
+  "name": "@lyv/depwatch",
   "version": "0.1.0",
   "description": "Detects dependency changes so you know when you need to restore them",
   "main": "index.js",
