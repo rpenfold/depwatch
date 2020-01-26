@@ -3,23 +3,23 @@ const colors = require("colors");
 const checkNodeDeps = require("./checkNodeDeps");
 const { getConfig } = require("../utils/packageJson");
 
-module.exports = function() {
+function resultMessageBuilder(type, count) {
+    const icon = count === 0
+        ? "✔️".green
+        : "✖️".red;
+
+    return `${icon} ${count} ${type} package${count === 1 ? '' : 's'} need to be restored`;
+}
+
+module.exports = function(options) {
     const config = getConfig() || {};
-    const shouldRestore = process.argv.includes('-r') || config.restore;
-    const shouldRunNode = process.argv.includes('--node') || config.checkNode;
-    const shouldRunPods = process.argv.includes('--pods') || config.checkPods;
+    const shouldRestore = options.restore || config.restore;
+    const shouldRunNode = options.node || config.checkNode;
+    const shouldRunPods = options.pods || config.checkPods;
     const noTypesSpecified = !shouldRunNode && !shouldRunPods;
 
-    function resultMessageBuilder(type, count) {
-        const icon = count === 0
-            ? "✔️".green
-            : "✖️".red;
-
-        return `${icon} ${count} ${type} package${count === 1 ? '' : 's'} need to be restored`;
-    }
-
     if (shouldRunNode || noTypesSpecified) {
-        const needsUpdate = checkNodeDeps();
+        const needsUpdate = checkNodeDeps(options);
         const message = resultMessageBuilder("node", needsUpdate.length);
 
         console.debug(message);

@@ -15,7 +15,8 @@
   "author": "Ryan Penfold",
   "license": "MIT",
   "dependencies": {
-    "colors": "1.4.0"
+    "colors": "1.4.0",
+    "command-line-args": "5.1.1"
   },
   "bin": {
     "depwatch": "./index.js"

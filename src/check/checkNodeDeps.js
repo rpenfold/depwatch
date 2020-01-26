@@ -17,10 +17,10 @@ function diff(actual, cached, misses = []) {
     return misses;
 }
 
-module.exports = function() {
+module.exports = function(options) {
     const { getPackageJson } = require ("../utils/packageJson");
     const { getCache, updateNodeCache } = require("../utils/cache");
-    const shouldUpdate = process.argv.includes("-u");
+    const shouldUpdate = options.update;
 
     const { dependencies, devDependencies, depWatch } = getPackageJson();
     const { node } = getCache();

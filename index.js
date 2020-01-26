@@ -1,11 +1,22 @@
 #!/usr/bin/env node
 
-const args = process.argv.splice(process.execArgv.length + 2);
-const command = args[0];
+const commandLineArgs = require('command-line-args');
+const optionDefinitions = [
+    { name: 'command', type: String, defaultOption: true },
+    { name: 'node', alias: 'n', type: Boolean },
+    { name: 'pods', alias: 'p', type: Boolean },
+    { name: 'restore', alias: 'r', type: Boolean },
+    { name: 'update', alias: 'u', type: Boolean }
+];
+const options = commandLineArgs(optionDefinitions);
 
-
-if (command === "check") {
-    require("./src/check")();
-} else if ( command === "gitignore") {
-    require("./src/gitignore")();
+switch (options.command) {
+    case "check":
+        require("./src/check")(options);
+        break;
+    case "gitignore":
+        require("./src/gitignore")(options);
+        break;
+    default:
+        break;
 }
