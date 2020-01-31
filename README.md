@@ -38,7 +38,7 @@ Updates the snapshot without running check. Recommended to add this to `postinst
 
 | Option   | Alias | Description                                                  |
 |----------|-------|--------------------------------------------------------------|
-| all      | -a    | Checks for changes to all dependencies
+| all      | -a    | Checks for changes to all dependencies                       |
 | restore  | -r    | Restore dependencies if missing                              |
 | update   | -u    | Update the snapshot                                          |
 | node     | -n    | Check for changes to JavaScript dependencies                 |
@@ -64,3 +64,4 @@ Alternatively, you can specify configuration in the `package.json` file.
 - [ ] ability to restore packages automatically from `dep-watch`
 - [ ] option to only restore dependencies that have changed
 - [ ] option to store configuration in `.depwatchrc` instead of just `package.json`
+- [ ] add watcher

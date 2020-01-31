@@ -11,8 +11,7 @@
   "scripts": {
     "gitignore": "node ./index gitignore",
     "check": "node ./index check -u",
-    "update": "node ./index update -a",
-    "postinstall": "npm run update"
+    "update": "node ./index update -a"
   },
   "author": "Ryan Penfold",
   "license": "MIT",
