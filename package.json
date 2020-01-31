@@ -1,6 +1,6 @@
 {
   "name": "@lyv/depwatch",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "keywords": ["node_modules", "pods", "dependencies", "libs"],
   "description": "Detects dependency changes so you know when you need to restore them",
   "repository": {
